@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bramble"
+version = "0.0.1"
+requires-python = ">=3.9"
+description = "Bayesian Relationships for Allometric Modeling of Biomass with Laplace and Entropy."
+readme = "README.md"
+dependencies = [
+    "numpy",
+    "pandas",
+    "pytensor",
+    "pymc"
+]
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+    "pytest-cov"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.pytest.ini_options]
+addopts = "--cov=bramble"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["src"]
