@@ -22,9 +22,3 @@ test = [
 [tool.setuptools]
 package-dir = {"" = "src"}
 
-[tool.pytest.ini_options]
-addopts = "--cov=bramble"
-testpaths = ["tests"]
-
-[tool.coverage.run]
-source = ["src"]
