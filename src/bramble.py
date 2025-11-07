@@ -1,7 +1,7 @@
 import numpy as np
 
 
-class BRAMBLE:
+class Bramble:
     def __init__(self, params, inference=False):
         if inference:
             self.numPCK = __import__("pytensor").tensor
